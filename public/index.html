@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Dev Test</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'percentage'],
+          ['Work',    30],
+          ['work1',      25],
+          ['work2', 45],
+
+        ]);
+
+        var options = {
+          title: 'Open Position By Department',
+          pieHole: 0.5,
+          backgroundColor: "rgb(27, 26, 26)",
+
+          pieSliceTextStyle: {
+            color: 'black',
+            
+          },
+          legend: 'none'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('div8'));
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['month', 'Applicants', 'Applicantss'],
+          ['jan',  35,      60],
+          ['feb',  59,      38],
+          ['march',  39,       38],
+          ['april',  80,      50]
+          
+        ]);
+
+        var options = {
+          title: 'Applicants received',
+          curveType: 'function',
+          legend: { position: 'bottom' },
+          backgroundColor : "rgb(27, 26, 26)"
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('div5'));
+
+        chart.draw(data, options);
+      }
+    </script>
+     <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["applicants", "Density", { role: "style" } ],
+          ["applicants", 10.4, "white"],
+          ["shortlisted", 10.49, "blue"],
+          ["Rejected", 19.30, "red"],
+          ["on hold", 21.45, "purple"]
+        ]);
+  
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+                         { calc: "stringify",
+                           sourceColumn: 1,
+                           type: "string",
+                           role: "annotation" },
+                         2]);
+  
+        var options = {
+          title: "Total Applicants",
+          width: 240,
+          height: 140,
+          bar: {groupWidth: "45%"},
+          legend: { position: "none" },
+          backgroundColor : "rgb(27, 26, 26)",
+          color: '#FFF'
+        };
+        var chart = new google.visualization.BarChart(document.getElementById("div6"));
+        chart.draw(view, options);
+    }
+    </script>
+  
+    
+        
+    
+   
+    
+</head>
+<body>
+
+
+    
+    <h4>Dashboard</h4>
+    <nav class="nav">
+    <ul>
+        <li id="first">Monday, 02 july 2020</li>
+        <li><button id="btn" class="left">+Add</button></li>
+        <li><input type="text" class="place" placeholder=" &#xf002 Search here for Applicants"></li>
+    </ul>
+    </nav>
+    <br>
+    <div class="main">
+        
+    <div id="div1" class="items">
+        <h5>Total Apllications
+        </h5>
+        <h5 class="inl">7956</h5>
+        
+        
+        
+        
+            
+                <div class="single-chart">
+                    <svg viewBox="0 0 36 36" class="circular-chart orange">
+                    <path class="circle-bg"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                    />
+                    <path class="circle"
+                  stroke-dasharray="70, 100"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                    />
+                    <text x="18" y="21.35" class="percentage">70%</text>
+                    </svg>
+                </div>
+               
+            
+            
+            
+        
+    </div>
+    <div id="div2" class="items">
+        <h5>Shortlisted Candidates
+        </h5>
+        <h4 class="inl">4658</h4>
+        
+        
+            
+                <div class="single-chart">
+                    <svg viewBox="0 0 36 36" class="circular-chart white">
+                    <path class="circle-bg"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                    />
+                    <path class="circle"
+                  stroke-dasharray="60, 100"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                    />
+                    <text x="18" y="21.35" class="percentage">+60%</text>
+                    </svg>
+                </div>
+            
+            
+        
+    </div>
+    <div id="div3" class="items">
+        <h5>Total Apllications
+        </h5>
+        <h4 class="inl">1501</h4>
+        
+        
+            
+                <div class="single-chart">
+                    <svg viewBox="0 0 36 36" class="circular-chart red">
+                    <path class="circle-bg"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                    />
+                    <path class="circle"
+                  stroke-dasharray="60, 100"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                    />
+                    <text x="18" y="21.35" class="percentage">-40%</text>
+                    </svg>
+                </div>
+            
+            
+    </div>
+    <div id="div4" class="items">
+        <h5>Hello john Bayer,</h5>
+        <h5>You have a New Application Today!</h5>
+        <img src="css/jb.png" width="70%">
+        <div class="applicants">
+            <h5>New Applicants</h5>
+            <table>
+            <tr>
+                <td ><i class="fa fa-user-circle-o"></i></td>
+                <td class="cols">Rosie Metts       </td>
+            
+                <td><i class="fa fa-user-circle-o"></i></td>
+                <td><i class="fa fa-envelope-o"></i></td>
+            </tr>
+            <tr>
+                <td ><i class="fa fa-user-circle-o"></i></td>
+                <td class="cols">James Scott       </td>
+            
+                <td><i class="fa fa-user-circle-o"></i></td>
+                <td><i class="fa fa-envelope-o"></i></td>
+            </tr>
+            <tr>
+                <td ><i class="fa fa-user-circle-o"></i></td>
+                <td class="cols">Jamie Lausrenson       </td>
+            
+                <td><i class="fa fa-user-circle-o"></i></td>
+                <td><i class="fa fa-envelope-o"></i></td>
+            </tr>
+            <tr>
+                <td ><i class="fa fa-user-circle-o"></i></td>
+                <td class="cols">Elizabeth Hurton      </td>
+            
+                <td><i class="fa fa-user-circle-o"></i></td>
+                <td><i class="fa fa-envelope-o"></i></td>
+            </tr>
+            <tr>
+                <td ><i class="fa fa-user-circle-o"></i></td>
+                <td class="cols">Danny Watson       </td>
+            
+                <td><i class="fa fa-user-circle-o"></i></td>
+                <td><i class="fa fa-envelope-o"></i></td>
+            </tr>
+            <tr>
+                <td ><i class="fa fa-user-circle-o"></i></td>
+                <td class="cols">Rehs Scarlett       </td>
+            
+                <td><i class="fa fa-user-circle-o"></i></td>
+                <td><i class="fa fa-envelope-o"></i></td>
+            </tr>
+                      
+            </table>
+        </div>
+    
+    </div>
+    <div id="div5" class="items">
+        
+    </div>
+    <div id="div6" class="items"></div>
+    <div id="div7" class="items">
+        <h5 class="div7inline">Referals and Campaign Stats</h5>
+        <h5 class="div7inline" id="div7inline"><i class="fa fa-paper-plane-o">  </i>40 Companies Sent in total</h5>
+        <br>
+        <div class="seven">
+            <h5>User's Reached</h5>
+            <h2>7956</h2>
+        </div>
+        <div class="seven">
+            <h5>Referal's</h5>
+            <h2>0662</h2>
+        </div>
+        <div class="seven">
+            <h5>Shares</h5>
+            <h2>1478</h2>
+        </div>
+        <div class="seven">
+            <h5>Applicants</h5>
+            <h2>0564</h2>
+        </div>
+        <div class="sevenn" id="sevenn1">Start a new campaign now</div>
+        <div class="sevenn" id="sevenn2">pause All Running Campaign</div>
+    </div>
+    <div id="div8" class="items">
+        <h5>Open Positions By Department</h5>
+        
+    
+    </div>
+    </div>
+    
+</body>
+</html>
